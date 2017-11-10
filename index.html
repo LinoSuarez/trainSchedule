@@ -1,0 +1,106 @@
+<html lang="en">
+    
+    <head>
+    
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
+      <script src="http://momentjs.com/downloads/moment.js"></script>
+      
+      <title>Employee Data Management</title>
+    </head>
+    
+    <body>
+      <div class="container-fluid">
+        <!-- Header -->
+        <div class="row">
+        <div class="col-xs-1 col-sm-1"></div>
+        <div class="col-xs-10 col-sm-10">
+          <div class="jumbotron">
+            <h1 class="text-center">Train Schedule</h1>
+          </div>
+          </div>
+          <div class="col-xs-1 col-sm-1"></div>
+        
+
+        </div>
+        <!-- body -->
+        <div class="wrapper">
+            <div class="row">
+                <div class="col-xs-1 col-sm-1"></div>
+                <div class="col-xs-10 col-sm-10">
+                        <div class="panel panel-default">
+                                <div class="panel-heading">
+                                  <h3 class="panel-title">Current Train Schedule</h3>
+                                </div>
+                        <table class="table" id="tableHolder">
+                                <thead>
+                                   <tr>
+                                      <th>Train Name</th>
+                                      <th>Destination</th>
+                                      <th>Frequency (min)</th>
+                                      <th>Next Arrival</th>
+                                      <th>Minutes Away</th>
+                                   </tr>
+                                </thead>
+                                <tbody id="employeeTable">
+                     
+                                </tbody>
+                             </table>
+                             </div>
+                             </div>
+                <div class="col-xs-1 col-sm-1"></div>
+
+            </div>
+        <div class="row">
+            <div class="col-xs-1 col-sm-1"></div>
+            <div class="col-xs-10 col-sm-10">
+                    <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h3 class="panel-title">Add Train</h3>
+                            </div>
+                <form id="formHolder" class= "center-block formie">
+                    <div class="form-group">
+                        <label for="searchTerm">Train Name</label>
+                        <input type="text" class="form-control" id="nameVal" placeholder="ex: Boston Bus" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="numberRecords">Destination</label>
+                        <input type="text" class="form-control" id="destinationVal" placeholder="ex: Spain" required>
+                    </div>
+                    <div class="form-group">
+                            <label for="numberRecords">First Train Time </label>
+                            <input type="time" class="form-control" id="firstTrainVal" placeholder="">
+                    </div>
+                    <div class="form-group">
+                            <label for="numberRecords">Frequency (min)</label>
+                            <input type="number" class="form-control" id="frequencyVal" placeholder="ex: 30">
+                    </div>
+                    <div class="form-group">
+                            <button type="submit" class="btn btn-info" id="submitButton">Submit</button>
+        
+                    </div>
+                </form>
+                    </div>
+            </div>
+        
+            <div class="col-xs-1 col-sm-1"></div>
+        </div>
+
+        <!-- Articles -->
+
+        
+              
+      </div>
+    
+    
+    
+      <script type="text/javascript" src="js/trainSchedule.js"></script>
+    </body>
+    
+    </html>
